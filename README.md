@@ -45,13 +45,13 @@ An **automatic rain detection system** that detects rainfall and moves a clothes
 
 ##  Circuit Diagram
 
- **[View Circuit Diagram](circuit_diagram.png)** 
+ **[View Circuit Diagram](circuit/circuit_diagram.png)** 
 
 ---
 
 ##  Code
 
-**Click here:** [`rain_detector.ino`](rain_detector.ino) – Full Arduino code  
+**Click here:** [`rain_detector.ino`](code/rain_detector.ino) – Full Arduino code  
 
 ---
 
@@ -80,7 +80,7 @@ An **automatic rain detection system** that detects rainfall and moves a clothes
 
 ## Full Report
 
-📎 **[Download Full Project Report (PDF)](Smart_Rain_Detector.pdf)** – Complete documentation with abstract, results, references.
+📎 **[Download Full Project Report (PDF)](doc/Smart_Rain_Detector.pdf)** – Complete documentation with abstract, results, references.
 
 ---
 
