@@ -27,7 +27,6 @@ An **automatic rain detection system** that detects rainfall and moves a clothes
 - Audible buzzer alert when rain starts  
 - Smooth servo movement (no sudden jerks)  
 - Low‑cost and energy‑efficient  
-- Expandable for IoT and AI
 
 ---
 
@@ -41,76 +40,53 @@ An **automatic rain detection system** that detects rainfall and moves a clothes
 | Buzzer (5V) | 1 |
 | Mini Breadboard | 1 |
 | Jumper Wires (Male-to-Male & Male-to-Female) | As needed |
-| Arduino Nano USB Cable | 1 |
 
 ---
 
 ##  Circuit Diagram
 
-📎 **[View Circuit Diagram](circuit_diagram.png)** – opens in a new tab
-
-> *The diagram shows connections for Arduino Nano, rain sensor, servo motor, and buzzer.*
+ **[View Circuit Diagram](circuit_diagram.png)** 
 
 ---
 
 ##  Code
 
- **[`rain_detector.ino`](rain_detector.ino)** – Full Arduino code
-
-Key functions:
-- `moveServoSmoothly()` – Gradual servo movement (no jerks)
-- `digitalRead(rainSensorPin)` – Reads rain status (`LOW` = rain detected)
-- `digitalWrite(buzzerPin, HIGH)` – Activates buzzer for 1 second
+**Click here:** [`rain_detector.ino`](rain_detector.ino) – Full Arduino code  
 
 ---
 
 ##  Working Principle
 
-1. The **rain sensor** detects water droplets on its surface → electrical resistance decreases.
-2. The sensor module outputs a **digital LOW** signal on pin D2 of the Arduino Nano.
-3. When rain is detected (`LOW`):
-   - Buzzer (pin D3) sounds for **1 second**.
-   - Servo motor (pin D4) moves smoothly from **92°** (drying position) to **0°** (covered position).
-4. When rain stops (`HIGH`):
-   - Servo returns smoothly from **0°** to **92°**.
-   - Buzzer remains OFF.
-5. A **100 ms delay** prevents false triggers from sensor noise.
+1. Rain sensor detects water → resistance decreases → Arduino reads **LOW** on pin D2.
+2. When rain is detected:
+   - Buzzer (D3) sounds for **1 second**.
+   - Servo (D4) moves from **92° → 0°** (smooth).
+3. When rain stops:
+   - Servo returns **0° → 92°**.
+   - Buzzer OFF.
+4. 100 ms delay prevents false triggers.
 
 ---
 
 ##  How to Use
 
-1. **Wiring** – Connect all components as shown in the [Circuit Diagram](#circuit-diagram).
-2. **Upload Code** – Open `rain_detector.ino` in Arduino IDE, select **Arduino Nano** board, and upload.
-3. **Power** – Connect USB cable or external 7–12V power to the Nano.
-4. **Test** – Pour a few drops of water on the rain sensor. The servo should move, and buzzer should sound.
-5. **Placement** – Mount the sensor where rain can fall on it. Attach a clothes rack to the servo arm.
+1. **Wiring** – Follow the [Circuit Diagram](#circuit-diagram).
+2. **Upload Code** – Download `rain_detector.ino` and open in Arduino IDE. Select **Arduino Nano** board, then upload.
+3. **Power** – Connect USB or external 7–12V.
+4. **Test** – Drop water on the sensor; servo should move, buzzer should sound.
+5. **Placement** – Mount sensor where rain can reach it; attach clothes rack to servo arm.
 
 ---
 
-##  Full Report
+## Full Report
 
- **[Download Full Project Report (PDF)](Smart_Rain_Detector.pdf)** – Detailed documentation including abstract, introduction, results, references, etc.
+📎 **[Download Full Project Report (PDF)](Smart_Rain_Detector.pdf)** – Complete documentation with abstract, results, references.
 
 ---
 
 ##  License
 
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file.
 
 ---
 
-##  Author
-
-**P.G.R.H.Pusswella**  
----
-
-##  Acknowledgements
-
-- [Arduino](https://www.arduino.cc/) – Servo library & documentation  
-- [Last Minute Engineers](https://lastminuteengineers.com/) – Rain sensor interfacing guide  
-- [ElectronicWings](https://www.electronicwings.com/) – Buzzer interfacing tutorial  
-
----
-
- *If this project helps you, please give it a star on GitHub!*
